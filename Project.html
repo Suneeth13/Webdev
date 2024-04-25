@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f8;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3, p, b, u {
+            color: #333;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        /* Add any additional global styles here */
+    </style>
+</head>
+<body>
+
+    <!-- Registration Form -->
+    <section>
+        <h1>Registration Form</h1>
+        <form action="/action.php">
+            <h2>Enter your username and password</h2>
+            <input type="text" placeholder="Username"><br><br>
+            <input type="password" placeholder="Password"><br><br>
+
+            <h2>Select your class</h2>
+            <label for="classXI">
+                <input type="radio" value="class XI" name="class" id="classXI">Class XI
+            </label><br><br>
+            <label for="classXII">
+                <input type="radio" value="class XII" name="class" id="classXII">Class XII
+            </label><br><br>
+
+            <h2>Select your favorite subjects</h2>
+            <label for="math">
+                <input type="checkbox" value="math" name="subject" id="math">Math
+            </label><br>
+            <label for="phy">
+                <input type="checkbox" value="phy" name="subject" id="phy">Physics
+            </label><br>
+            <label for="chem">
+                <input type="checkbox" value="chem" name="subject" id="chem">Chemistry
+            </label><br>
+            <label for="cs">
+                <input type="checkbox" value="cs" name="subject" id="cs">Computer Science
+            </label><br>
+
+            <br>Select your city
+            <select name="city">
+                <option value="Delhi">Delhi</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+            </select><br><br>
+
+            <textarea name="feedback" id="feedback" placeholder="Please give your feedback"></textarea><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <!-- User Registration Form -->
+    <section>
+        <h1>User Registration Form</h1>
+        <form action="your_backend_processing_script.php" method="post" enctype="multipart/form-data">
+
+            <!-- Include additional fields as needed -->
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+
+        </form>
+    </section>
+
+    <!-- Fruits and Characteristics -->
+    <section>
+        <h1>Fruits and Their Characteristics</h1>
+        <ol>
+            <li>Apple
+                <ul>
+                    <li>Colored</li>
+                    <li>Season: Winter</li>
+                </ul>
+            </li>
+            <li><strong>Banana</strong>
+                <ul>
+                    <li>Colored</li>
+                    <li>Season: Winter</li>
+                </ul>
+            </li>
+            <li><strong>Cherry</strong>
+                <ul>
+                    <li>Colored</li>
+                    <li>Season: Rainy</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <!-- Professional CSS Styling -->
+    <section>
+        <h1>Professional CSS Styling</h1>
+        <h2>Welcome to a professional CSS style demo</h2>
+        <p>This demo demonstrates professional styling using various CSS properties, ensuring a clean and organized layout. Content is presented in a structured manner with appropriate margins, colors, and text alignment.</p>
+        <div class="highlight">Highlighted section</div>
+    </section>
+
+    <footer>
+        <p>© 2024 Professional CSS Styling Demo</p>
+    </footer>
+
+    <!-- Sample HTML with Headings, Paragraphs, and Links -->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <hr>
+    <p>Sample paragraph Sample paragraph Sample paragraph Sample paragraph Sample paragraph Sample paragraph</p>
+    <hr>
+    <a href="https://www.google.com">Google</a><br>
+    <a href="https://code.visualstudio.com/download">Download VS code</a><br>
+    <a href="HelloFolder/Hello.html">Go to hello</a><br>
+    <hr>
+    <img src="https://www.tradeindia.com/_next/image/?url=https%3A%2F%2Ftiimg.tistatic.com%2Ffp%2F1%2F007%2F669%2Fyellow-cover-rectangular-single-line-a4-size-white-paper-spiral-notebook-with-224-pages-650.jpg&w=750&q=75" alt="Notebook"><br>
+    <img src="image.jpeg" alt="notebook"><br>
+    <img src="HelloFolder/image.jpeg" alt="notebook"><br>
+    <img src="image.jpeg" height="100"><br>
+    <hr>
+    <b>Bold</b><br>
+    <i>Italics</i><br>
+    <u>Underline</u><br>
+    <hr>
+    <p><u>Sample paragraph</u> Sample paragraph Sample paragraph Sample paragraph Sample paragraph Sample paragraph</p>
+    <hr>
+    <big>This tag shows big text.</big><br>
+    <hr>
+    <small>This tag shows small text.</small>
+    <hr>
+    <p>H<sub>2</sub>O</p>
+    <p>A<sup>2</sup>B</p>
+    <p>3<sup>2</sup> =9</p>
+    <pre>
+        This is 
+            a paragraph 
+             written using pre tag.
+    </pre>
+
+    <!-- YouTube and Wikipedia iframes -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/UmnCZ7-9yDY?si=NlPfqPBu7BPNc0uO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br><br>
+    <iframe src="https://www.wikipedia.org/" alt="Wikipedia" width="560" height="315"></iframe>
+
+</body>
+
+
+<body>
+    <header>
+        <h1>Welcome, Visitors!</h1>
+    </header>
+    <main>
+        <img src="Myphoto.jpg" height="100" alt="My Photo">
+        
+        <section>
+            <h2><u>LinkedIn Profile</u></h2>
+            <p>Connect with me on LinkedIn here: <a href="https://www.linkedin.com/in/reachmesuneeth/">LinkedIn</a></p>
+        </section>
+        <section>
+            <h2><u>Check out my GitHub Activities here: </u></h2>
+            <p>Explore my coding projects on GitHub: <a href="https://github.com/Suneeth13">GitHub</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>Thank you for visiting my profile.</p>
+    </footer>
+</body>
+
+
+
+<body>
+    <section>
+        <h1><u><b>My Achievements:</b></u></h1>
+        <p>
+            I am a highly motivated and dedicated 2nd-year engineering student at Vellore Institute of Technology, Chennai, with notable achievements in the fields of engineering and data science. This essay will explore my academic and extracurricular accomplishments, emphasizing my commitment to professional growth and excellence.
+        </p>
+    </section>
+
+    <section>
+        <h2><u><b>Academic Achievements:</b></u></h2>
+        <p>
+            My academic journey is distinguished by a specialization in Artificial Intelligence (AI) and Machine Learning (ML) within the Bachelor of Technology (B.Tech.) program. Projected to graduate in 2026, I have completed relevant coursework in Python, C, C++ (OOPs), and Mathematics. Significantly, my achievements surpass the standard curriculum, underscoring my dedication to continuous learning.
+        </p>
+
+        <h2><u><b>Coding Ninja Hackathon:</b></u></h2>
+        <p>
+            Demonstrating coding proficiency, I secured an impressive rank of Air 331 in the Coding Ninja Hackathon. This accomplishment not only showcases my technical acumen but also highlights my ability to compete at a high level among my peers.
+        </p>
+
+        <h2><u><b>IIT Bombay Spoken Tutorials 2023 Test:</b></u></h2>
+        <p>
+            Having passed the IIT Bombay Spoken Tutorials 2023 Test with merit, I exhibit proficiency in spoken and written communication. This achievement reflects my dedication to refining language skills, an invaluable asset in any professional setting.
+        </p>
+
+        <h2><u><b>Technical Proficiencies and Skills:</b></u></h2>
+        <p>
+            I possess a robust foundation in technical proficiencies, encompassing Python, C, C++, and Microsoft Office. Analytical thinking, a collaborative approach to teamwork, effective communication skills, and adept time management contribute to my well-rounded skill set. My openness to new challenges and adaptability to changing environments further highlight my versatility.
+        </p>
+    </section>
+
+    <section>
+        <h2><u><b>Language Proficiency:</b></u></h2>
+        <p>
+            Having achieved distinction in the Cambridge Young Learners English Program, my success in language proficiency tests, including the Key English Test and the First Certificate in English Test, underscores my multilingual capabilities in English, Tamil, Telugu, Hindi, and Sanskrit.
+        </p>
+    </section>
+</body>
+
+
+<body>
+    <big><b><u>My educational experience: </u></b></big>
+    <p>
+        From Mud Pies to Machine Learning: A Winding Path of Knowledge
+        My earliest memories of education are painted in vibrant hues of colored clay and the echoing laughter of friends. Gurukulam school, with its playful chaos and terracotta playground, laid the foundation for a lifelong love of learning. At Oak Meadows in the United Kingdom, amidst rolling hills and foreign accents, I stumbled through my first words in English, my tongue forever marked by the lilt of a different land.
+        <br>
+        <br> Returning to India, Chettinadu Vidyalaya nurtured my budding curiosity. From dissecting frogs in biology class to scribbling sonnets in English literature, the world unveiled itself in endless fascinations. Velammal Vidyalaya then became the crucible where I tested my academic mettle. With every equation cracked and poem parsed, I honed my hunger for knowledge, culminating in a near-perfect score in my 10th board exams.
+        <br>
+        <br> The decision to pursue science, however, wasn't a foregone conclusion. The world of numbers and formulas intrigued me, but so did the ethereal magic of words. In the end, it was the potential to build, to weave code into solutions, that drew me to the path of Computer Science. Sri Chaitanya e-Techno School became my training ground, its rigorous schedules and competitive spirit pushing me to new intellectual heights. The grueling days and sleepless nights culminated in a resounding victory – a 93rd percentile score in the national JEE exam.
+        <br>
+        <br> Today, as a second-year B.Tech student at VIT Chennai, specializing in Computer Science with Artificial Intelligence and Machine Learning, my journey has come full circle. The playground mud pies have morphed into lines of code, the playground laughter into the whirring of algorithms. But the journey isn't just about technical prowess; it's about the relentless pursuit of understanding, the constant thrill of discovery.
+        <br>
+        <br> From the sun-drenched classrooms of Chettinadu to the high-tech labs of VIT, my educational path has been a winding odyssey. It's been a journey of embracing diverse cultures, overcoming challenges, and discovering the immense potential within myself. And while the destination – graduation, a career, a future – beckons, it's the winding path itself that I cherish most. It's the laughter, the tears, the failures and triumphs that have shaped me into the learner, the explorer, the thinker I am today.
+        <br>
+        <br> So, as I move forward, fueled by curiosity and driven by determination, I know that this is just the beginning. This is just the first line of code in the grand program of my life, and I can't wait to see what amazing things I can build, one learning, one challenge, one discovery at a time.
+    </p>
+</body>
+</html>
