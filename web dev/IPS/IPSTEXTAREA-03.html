@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Comments</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #errorMsg {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heading</h1>
+    <textarea id="displayArea" readonly></textarea><br>
+    <select id="places" multiple>
+        <option value="Place1">Place1</option>
+        <option value="Place2">Place2</option>
+        <option value="Place3">Place3</option>
+        <option value="Place4">Place4</option>
+    </select><br>
+    <textarea id="comments" required spellcheck="true"></textarea><br>
+    <button onclick="addComment()">Add</button>
+    <p id="errorMsg"></p>
+    <script>
+        function addComment() {
+            var selectedPlaces = Array.from(document.getElementById('places').selectedOptions).map(option => option.value);
+            var comment = document.getElementById('comments').value;
+            
+            // Retrieve existing comments from displayArea
+            var existingComments = document.getElementById('displayArea').value.split('\n');
+
+            // Check if any of the selected places already exist in the existing comments
+            var placesExist = existingComments.some(function(existingComment) {
+                var existingPlaces = existingComment.split(':')[0].split(',');
+                return selectedPlaces.every(function(selectedPlace) {
+                    return existingPlaces.includes(selectedPlace);
+                });
+            });
+
+            if (selectedPlaces.length === 0 || comment === "") {
+                document.getElementById('errorMsg').innerHTML = "Error: Please select at least one place and enter a comment.";
+            } else if (placesExist) {
+                document.getElementById('errorMsg').innerHTML = "Error: Some selected places already have comments.";
+            } else {
+                var displayArea = document.getElementById('displayArea');
+                var commentText = selectedPlaces.join(',') + ':' + comment;
+                displayArea.value = commentText + "\n" + displayArea.value;
+                document.getElementById('errorMsg').innerHTML = "";
+            }
+        }
+    </script>
+</body>
+</html>

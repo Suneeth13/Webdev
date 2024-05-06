@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appendment</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .input-container {
+      margin-bottom: 10px;
+    }
+    .output-container {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="input-container">
+      <label for="input">Type something:</label>
+      <textarea id="input" rows="4" cols="50"></textarea>
+    </div>
+    <div class="input-container">
+      <label for="checkbox">Choose one:</label>
+      <input type="checkbox" id="checkbox1" name="checkbox" value="Option 1">
+      <label for="checkbox1">Option 1</label>
+      <input type="checkbox" id="checkbox2" name="checkbox" value="Option 2">
+      <label for="checkbox2">Option 2</label>
+      <input type="checkbox" id="checkbox3" name="checkbox" value="Option 3">
+      <label for="checkbox3">Option 3</label>
+      <input type="checkbox" id="checkbox4" name="checkbox" value="Option 4">
+      <label for="checkbox4">Option 4</label>
+    </div>
+    <div class="input-container">
+      <label for="radio">Select one:</label>
+      <input type="radio" id="radio1" name="radio" value="Option 1">
+      <label for="radio1">Option 1</label>
+      <input type="radio" id="radio2" name="radio" value="Option 2">
+      <label for="radio2">Option 2</label>
+      <input type="radio" id="radio3" name="radio" value="Option 3">
+      <label for="radio3">Option 3</label>
+      <input type="radio" id="radio4" name="radio" value="Option 4">
+      <label for="radio4">Option 4</label>
+    </div>
+    <div class="input-container">
+      <label for="dropdown">Select one:</label>
+      <select id="dropdown">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+        <option value="Option 4">Option 4</option>
+      </select>
+    </div>
+    <button onclick="submitForm()">Submit</button>
+    <div class="output-container">
+      <label for="output">Selected values:</label>
+      <textarea id="output" rows="4" cols="50" readonly></textarea>
+    </div>
+  </div>
+
+  <script>
+    function submitForm() {
+      var input = document.getElementById("input").value;
+      var checkboxes = document.getElementsByName("checkbox");
+      var selectedCheckboxes = "";
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          selectedCheckboxes += checkboxes[i].value + ", ";
+        }
+      }
+      selectedCheckboxes = selectedCheckboxes.slice(0, -2);
+      var radios = document.getElementsByName("radio");
+      var selectedRadio = "";
+      for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+          selectedRadio = radios[i].value;
+          break;
+        }
+      }
+      var dropdown = document.getElementById("dropdown").value;
+
+      var output = document.getElementById("output");
+      var previousValue = output.value;
+      output.value = "Input: " + input + "\n";
+      output.value += "Checkbox: " + selectedCheckboxes + "\n";
+      output.value += "Radio: " + selectedRadio + "\n";
+      output.value += "Dropdown: " + dropdown + "\n";
+      output.value += "------------------------\n";
+      output.value +=  previousValue;
+    }
+  </script>
+</body>
+</html>

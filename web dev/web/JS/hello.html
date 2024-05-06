@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Generator</title>
+    <script>
+        function generateEmail() {
+            var firstName = document.getElementById('firstName').value;
+            var lastName = document.getElementById('lastName').value;
+            
+            if (firstName.length >= 8 && firstName.length <= 15 && lastName.length >= 8 && lastName.length <= 15) {
+                var email = firstName.toLowerCase() + '.' + lastName.toLowerCase() + '@hotmail.com';
+                document.getElementById('generatedEmail').innerHTML = email;
+            } else {
+                document.getElementById('generatedEmail').innerHTML = "";
+                document.getElementById('firstName').value = "";
+                document.getElementById('lastName').value = "";
+                alert("Please enter a first name and last name with a length between 8 and 15 characters.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the email Generator</h1>
+    <h2>Enter your first name, last name, and then click the button</h2>
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName"><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName"><br><br>
+    <button onclick="generateEmail()">Generate</button><br><br>
+    <label for="generatedEmail">Generated Email:</label>
+    <span id="generatedEmail"></span>
+    
+</body>
+</html>
